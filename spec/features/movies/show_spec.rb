@@ -11,9 +11,8 @@ RSpec.describe 'As a visitor', type: :feature do
 
       MovieActor.create!(movie_id: batman.id, actor_id: bale.id)
       MovieActor.create!(movie_id: batman.id, actor_id: man.id)
-      # require 'pry'; binding.pry
-      visit "movies/#{batman.id}"
-      
+    
+      visit "movies/#{batman.id}"  
 
       expect(page).to have_content(batman.title)
       expect(page).to have_content(batman.creation_year)

@@ -1,4 +1,8 @@
-<%# <%  require 'pry'; binding.pry%> %>
 <h1> Title: <%= @movie.title %></h1>
 Released: <%=  @movie.creation_year %><br>
 Genre: <%=  @movie.genre %><br>
+<% actors = @movie.actors.order(:age) %>
+<% actors.each do |actor| %>
+<%=  actor.name %><br>
+<% end %>
+Average Actor Age: <%=  @movie.actors.average_age %>
