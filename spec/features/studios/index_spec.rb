@@ -15,9 +15,9 @@ RSpec.describe 'As a visior', type: :feature do
 
       expect(page).to have_content(warner.name)
       expect(page).to have_content(mgm.name)
-      expect(page).to have_content(batman.name)
-      expect(page).to have_content(badman.name)
-      expect(page).to have_content(thor.name)
+      expect(page).to have_content(batman.title)
+      expect(page).to have_content(badman.title)
+      expect(page).to have_content(thor.title)
     end
   end
 end
