@@ -1,5 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Studio, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'validaitons' do
+    it { should validate_presence_of :name}
+    it { should validate_presence_of :location}
+  end
+
+  describe 'relationships' do
+    it { should have_many :movies}
+  end
 end
